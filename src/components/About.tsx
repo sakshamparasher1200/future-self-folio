@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 
 const About = () => {
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "3+", label: "Years Experience" },
-    { number: "15+", label: "Technologies Mastered" },
-    { number: "100%", label: "Client Satisfaction" },
+    { number: "100+", label: "LeetCode Problems Solved" },
+    { number: "7.21", label: "CGPA" },
+    { number: "25%", label: "Query Performance Improvement" },
+    { number: "30%", label: "Traffic Wait Time Reduction" },
   ];
 
   return (
@@ -25,20 +25,18 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I'm a passionate Full Stack Developer with over 3 years of experience in creating 
-              innovative web applications. My journey started with a Computer Science degree, 
-              and I've since worked with startups and established companies to deliver 
-              high-quality digital solutions.
+              I'm a passionate Computer Science student at Lovely Professional University, specializing in 
+              data science and database technologies. My journey includes hands-on experience as a Database & ERP 
+              Analyst Intern at DiagnoCare India, where I optimized SQL databases and improved query performance by 25%.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I specialize in React, Node.js, and modern web technologies. My goal is to 
-              create applications that not only look great but also provide exceptional 
-              user experiences. I'm constantly learning and staying up-to-date with the 
-              latest industry trends and best practices.
+              I specialize in machine learning, computer vision, and database optimization. My recent work includes 
+              developing a real-time traffic optimization system using YOLOv8, which reduced vehicle wait times by 30%. 
+              I'm passionate about solving complex problems with data-driven solutions and cutting-edge technology.
             </p>
             
             <div className="flex flex-wrap gap-2 mt-6">
-              {["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Docker"].map((tech) => (
+              {["Python", "Java", "SQL", "Machine Learning", "Computer Vision", "PostgreSQL"].map((tech) => (
                 <Badge key={tech} variant="outline" className="border-primary text-primary">
                   {tech}
                 </Badge>

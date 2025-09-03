@@ -6,42 +6,42 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Code,
-      title: "Frontend Development",
+      title: "Programming",
       skills: [
-        { name: "React/Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Vue.js", level: 80 },
+        { name: "Python", level: 90 },
+        { name: "Java", level: 85 },
+        { name: "SQL", level: 95 },
+        { name: "PyTorch", level: 80 },
       ]
     },
     {
       icon: Database,
-      title: "Backend Development",
+      title: "Databases & Big Data",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "MongoDB", level: 82 },
+        { name: "PostgreSQL", level: 95 },
+        { name: "MySQL", level: 90 },
+        { name: "MongoDB", level: 85 },
+        { name: "Apache Spark", level: 75 },
       ]
     },
     {
       icon: Cloud,
-      title: "DevOps & Cloud",
+      title: "Machine Learning & AI",
       skills: [
-        { name: "AWS", level: 85 },
-        { name: "Docker", level: 80 },
-        { name: "Kubernetes", level: 75 },
-        { name: "CI/CD", level: 85 },
+        { name: "TensorFlow", level: 85 },
+        { name: "Scikit-learn", level: 90 },
+        { name: "YOLOv8", level: 85 },
+        { name: "OpenCV", level: 80 },
       ]
     },
     {
-      icon: Palette,
-      title: "Design & UX",
+      icon: Zap,
+      title: "Analytics & Visualization",
       skills: [
-        { name: "Figma", level: 90 },
-        { name: "UI/UX Design", level: 85 },
-        { name: "Prototyping", level: 88 },
-        { name: "User Research", level: 80 },
+        { name: "Pandas", level: 90 },
+        { name: "NumPy", level: 85 },
+        { name: "Tableau", level: 80 },
+        { name: "Power BI", level: 75 },
       ]
     },
   ];
@@ -92,9 +92,9 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold mb-8">Other Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "JavaScript", "Python", "Java", "C++", "GraphQL", "REST APIs", 
-              "Firebase", "Supabase", "Redis", "Jest", "Cypress", "Git", 
-              "Linux", "Nginx", "WebRTC", "Socket.io"
+              "C++", "HTML", "CSS", "JavaScript", "Docker", "AWS S3", "SageMaker", 
+              "Git", "GitHub", "HuggingFace", "Jira", "Apache Hadoop", "Keras", 
+              "Agile/Scrum", "Jupyter Notebook", "ONNX", "Kaggle"
             ].map((tech) => (
               <div 
                 key={tech}

@@ -5,48 +5,42 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      location: "Stanford, CA",
-      period: "2020 - 2022",
-      gpa: "3.9/4.0",
-      description: "Specialized in Machine Learning and Software Engineering. Thesis on AI-powered web applications.",
-      highlights: ["Dean's List", "Research Assistant", "Teaching Assistant"]
+      degree: "B.Tech - Computer Science & Engineering",
+      school: "Lovely Professional University",
+      location: "Punjab, India",
+      period: "Since August 2021",
+      gpa: "7.21/10.0",
+      description: "Specialized in Data Science, Machine Learning, and Database Systems. Active in coding competitions and technical workshops.",
+      highlights: ["100+ LeetCode Problems", "Workshop Organizer", "Football Excellence Certificates"]
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2016 - 2020",
-      gpa: "3.8/4.0",
-      description: "Focus on Software Development and Data Structures. Active member of Computer Science Society.",
-      highlights: ["Magna Cum Laude", "Programming Competition Winner", "CS Tutor"]
+      degree: "12th Grade - ISC",
+      school: "Metropolitan School",
+      location: "Gorakhpur, India",
+      period: "Completed March 2020",
+      gpa: "",
+      description: "Completed higher secondary education with focus on Science and Mathematics.",
+      highlights: ["Football Excellence (9th-12th Grade)", "Science Stream"]
     }
   ];
 
   const certifications = [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
+      name: "Accelerating Deep Learning with GPUs",
+      issuer: "Professional Certification",
+      date: "2024",
       icon: Award
     },
     {
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2023",
+      name: "Data Analytics Job Simulation",
+      issuer: "Industry Simulation",
+      date: "2024",
       icon: Award
     },
     {
-      name: "Certified Kubernetes Administrator",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2022",
-      icon: Award
-    },
-    {
-      name: "React Developer Certification",
-      issuer: "Meta",
-      date: "2022",
+      name: "Solutions Architecture Job Simulation",
+      issuer: "Industry Simulation",
+      date: "2024",
       icon: Award
     }
   ];

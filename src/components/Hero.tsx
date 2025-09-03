@@ -15,16 +15,16 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm{" "}
-            <span className="text-gradient">Alex Johnson</span>
+            <span className="text-gradient">Saksham Parasher</span>
           </h1>
           
           <div className="text-2xl md:text-3xl mb-6 h-16 flex items-center justify-center">
-            <span className="typing">Full Stack Developer & UI/UX Designer</span>
+            <span className="typing">Database & ERP Analyst | Data Science Enthusiast</span>
           </div>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I craft beautiful, functional web experiences with cutting-edge technology. 
-            Passionate about creating solutions that make a difference.
+            Passionate about data-driven solutions and machine learning. Specialized in database optimization, 
+            ERP systems, and computer vision applications that drive business impact.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -43,9 +43,9 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6">
             {[
-              { icon: Github, label: "GitHub", href: "#" },
-              { icon: Code, label: "LeetCode", href: "#" },
-              { icon: Mail, label: "Email", href: "mailto:alex@example.com" },
+              { icon: Github, label: "GitHub", href: "https://github.com/sakshamparasher1200" },
+              { icon: Code, label: "LeetCode", href: "https://leetcode.com/sakshamparasher" },
+              { icon: Mail, label: "Email", href: "mailto:sakshamparasher1200@gmail.com" },
             ].map((social, index) => (
               <a
                 key={index}

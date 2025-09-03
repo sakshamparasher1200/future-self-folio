@@ -6,40 +6,13 @@ import { ExternalLink, Github, Play } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include real-time inventory, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      githubUrl: "#",
+      title: "Real-Time Traffic Optimization via Computer Vision",
+      description: "Engineered an end-to-end intelligent traffic management system using YOLOv8 for real-time vehicle detection. Implemented predictive algorithms that reduced average vehicle wait times by 30% and increased intersection throughput by 15%.",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&h=300&fit=crop",
+      technologies: ["YOLOv8", "OpenCV", "Python", "Computer Vision", "Machine Learning"],
+      githubUrl: "https://github.com/sakshamparasher1200",
       liveUrl: "#",
       featured: true
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-      githubUrl: "#",
-      liveUrl: "#",
-      featured: true
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "An analytics dashboard for social media management with data visualization, scheduled posting, and engagement tracking.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      technologies: ["React", "D3.js", "Firebase", "Chart.js"],
-      githubUrl: "#",
-      liveUrl: "#",
-      featured: false
-    },
-    {
-      title: "AI Chat Application",
-      description: "A real-time chat application with AI integration, file sharing, and end-to-end encryption for secure communication.",
-      image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=500&h=300&fit=crop",
-      technologies: ["Next.js", "OpenAI API", "WebRTC", "Prisma"],
-      githubUrl: "#",
-      liveUrl: "#",
-      featured: false
     }
   ];
 

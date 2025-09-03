@@ -12,9 +12,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:alex@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/sakshamparasher1200", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/sakshamparasher", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:sakshamparasher1200@gmail.com", label: "Email" },
   ];
 
   return (
@@ -23,9 +23,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">Alex Johnson</h3>
+            <h3 className="text-xl font-bold text-gradient">Saksham Parasher</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Full Stack Developer passionate about creating innovative web solutions. 
+              Database & ERP Analyst | Data Science Enthusiast passionate about creating data-driven solutions. 
               Let's build something amazing together!
             </p>
             <div className="flex space-x-2">
@@ -65,9 +65,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Get In Touch</h4>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>San Francisco, CA</p>
-              <p>alex.johnson@example.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>Punjab, India</p>
+              <p>sakshamparasher1200@gmail.com</p>
+              <p>+91-6394609526</p>
             </div>
             <Button 
               size="sm" 
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Alex Johnson. All rights reserved.
+            © {currentYear} Saksham Parasher. All rights reserved.
           </div>
           
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
