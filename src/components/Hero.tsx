@@ -13,13 +13,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 px-4">
             Hi, I'm{" "}
             <span className="text-gradient">Saksham Parasher</span>
           </h1>
           
-          <div className="text-2xl md:text-3xl mb-6 h-16 flex items-center justify-center">
-            <span className="typing">Database & ERP Analyst | Data Science Enthusiast</span>
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 h-12 sm:h-16 flex items-center justify-center px-4">
+            <span className="typing text-center">Database & ERP Analyst | Data Science Enthusiast</span>
           </div>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -27,18 +27,27 @@ const Hero = () => {
             ERP systems, and computer vision applications that drive business impact.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="btn-hero">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+            <a 
+              href="/Saksham_Resume.pdf" 
+              download="Saksham_Parasher_Resume.pdf"
+              className="btn-hero"
+            >
               <span className="flex items-center gap-2">
                 <FileDown size={20} />
                 Download Resume
               </span>
-            </button>
+            </a>
             
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <Mail size={20} className="mr-2" />
-              Get In Touch
-            </Button>
+            <a 
+              href="mailto:sakshamparasher1200@gmail.com"
+              className="inline-flex"
+            >
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto">
+                <Mail size={20} className="mr-2" />
+                Get In Touch
+              </Button>
+            </a>
           </div>
 
           <div className="flex justify-center space-x-6">

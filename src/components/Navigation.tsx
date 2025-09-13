@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { id: "home", label: "Home" },
@@ -37,6 +39,7 @@ const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -64,15 +67,39 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button variant="ghost" size="sm" className="md:hidden">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             <span className="sr-only">Menu</span>
-            <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-              <div className="w-full h-0.5 bg-foreground"></div>
-              <div className="w-full h-0.5 bg-foreground"></div>
-              <div className="w-full h-0.5 bg-foreground"></div>
-            </div>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border">
+            <div className="flex flex-col space-y-2 p-4">
+              {navItems.map((item) => (
+                <Button
+                  key={item.id}
+                  variant={activeSection === item.id ? "default" : "ghost"}
+                  size="sm"
+                  onClick={() => scrollToSection(item.id)}
+                  className={`justify-start transition-all duration-300 ${
+                    activeSection === item.id 
+                      ? "bg-primary text-primary-foreground glow" 
+                      : "hover:bg-muted"
+                  }`}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

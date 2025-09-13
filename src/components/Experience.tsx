@@ -50,25 +50,25 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card key={index} className="card-hover bg-gradient-card border-border">
               <CardHeader>
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div className="flex flex-col gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-2xl mb-2 flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-primary/10">
+                    <CardTitle className="text-lg sm:text-xl lg:text-2xl mb-2 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10 flex-shrink-0">
                         <Briefcase size={24} className="text-primary" />
                       </div>
-                      {exp.title}
+                      <span className="break-words">{exp.title}</span>
                     </CardTitle>
-                    <div className="text-primary font-semibold text-lg mb-2">{exp.company}</div>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <div className="text-primary font-semibold text-base sm:text-lg mb-2">{exp.company}</div>
+                    <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Calendar size={16} />
-                        {exp.period}
+                        <span className="break-words">{exp.period}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <MapPin size={16} />
                         {exp.location}
                       </div>
-                      <Badge variant="outline" className="border-primary/30 text-primary">
+                      <Badge variant="outline" className="border-primary/30 text-primary w-fit">
                         {exp.type}
                       </Badge>
                     </div>
@@ -82,8 +82,8 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achievementIndex) => (
                       <li key={achievementIndex} className="text-muted-foreground text-sm leading-relaxed flex items-start gap-2">
-                        <span className="text-primary font-bold text-lg">•</span>
-                        {achievement}
+                        <span className="text-primary font-bold text-lg flex-shrink-0">•</span>
+                        <span className="break-words">{achievement}</span>
                       </li>
                     ))}
                   </ul>

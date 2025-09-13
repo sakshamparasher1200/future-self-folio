@@ -21,9 +21,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="space-y-6 order-2 lg:order-1">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
               I'm a passionate Computer Science student at Lovely Professional University, specializing in 
               data science and database technologies. My journey includes hands-on experience as a Database & ERP 
@@ -44,14 +44,14 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 order-1 lg:order-2">
             {stats.map((stat, index) => (
               <Card key={index} className="card-hover bg-gradient-card border-border">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
+                <CardContent className="p-4 sm:p-6 text-center">
+                  <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </CardContent>

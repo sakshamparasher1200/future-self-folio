@@ -239,3 +239,13 @@
   white-space: nowrap;
   animation: typing 3s steps(40) 1s forwards, blink 1s infinite;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .typing {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+    text-align: center;
+  }
+}
