@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto fade-in-up">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 px-4">
             Hi, I'm{" "}
-            <span className="text-gradient">Saksham Parasher</span>
+            <span className="text-gradient">Saksham Parashar</span>
           </h1>
           
           <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 h-12 sm:h-16 flex items-center justify-center px-4">
@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <a 
               href="/Saksham_Resume.pdf" 
-              download="Saksham_Parasher_Resume.pdf"
+              download="Saksham_Parashar_Resume.pdf"
               className="btn-hero"
             >
               <span className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="flex justify-center space-x-6">
             {[
               { icon: Github, label: "GitHub", href: "https://github.com/sakshamparasher1200" },
-              { icon: Code, label: "LeetCode", href: "https://leetcode.com/sakshamparasher" },
+              { icon: Code, label: "LeetCode", href: "https://leetcode.com/u/SakshamParashar/" },
               { icon: Mail, label: "Email", href: "mailto:sakshamparasher1200@gmail.com" },
             ].map((social, index) => (
               <a

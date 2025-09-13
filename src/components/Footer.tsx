@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">Saksham Parasher</h3>
+            <h3 className="text-xl font-bold text-gradient">Saksham Parashar</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Database & ERP Analyst | Data Science Enthusiast passionate about creating data-driven solutions. 
               Let's build something amazing together!
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Saksham Parasher. All rights reserved.
+            © {currentYear} Saksham Parashar. All rights reserved.
           </div>
           
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
