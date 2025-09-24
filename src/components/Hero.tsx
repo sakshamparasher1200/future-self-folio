@@ -13,34 +13,18 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto fade-in-up">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="text-4xl animate-bounce">🚀</span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
-              Hi, I'm{" "}
-              <span className="text-gradient">Saksham Parashar</span>
-            </h1>
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-primary/30">
-              <div className="w-full h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl sm:text-3xl font-bold text-white">
-                SP
-              </div>
-            </div>
-          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 px-4">
+            Hi, I'm{" "}
+            <span className="text-gradient">Saksham Parashar</span>
+          </h1>
           
           <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 h-12 sm:h-16 flex items-center justify-center px-4">
-            <span className="typing text-center flex items-center gap-2">
-              Database & ERP Analyst | Data Science Enthusiast
-              <span className="text-3xl">🎯</span>
-            </span>
+            <span className="typing text-center">Database & ERP Analyst | Data Science Enthusiast</span>
           </div>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto flex items-center gap-2 justify-center flex-wrap">
-            <span>Passionate about data-driven solutions</span>
-            <span className="text-2xl">✨</span>
-            <span>and machine learning.</span>
-            <span className="text-2xl">🤖</span>
-            <span>Specialized in database optimization,</span>
-            <span>ERP systems, and computer vision applications that drive business impact.</span>
-            <span className="text-2xl">📈</span>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Passionate about data-driven solutions and machine learning. Specialized in database optimization, 
+            ERP systems, and computer vision applications that drive business impact.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -82,14 +66,6 @@ const Hero = () => {
               </a>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Animated Ticker */}
-      <div className="absolute bottom-20 left-0 right-0 overflow-hidden bg-primary/10 py-2">
-        <div className="animate-scroll-left whitespace-nowrap">
-          <span className="text-sm font-medium text-primary mx-8">✦ THINK LESS ✦ CREATE MORE ✦ DATA DRIVEN ✦ MACHINE LEARNING ✦ INNOVATION ✦ PYTHON ✦ SQL ✦ COMPUTER VISION ✦</span>
-          <span className="text-sm font-medium text-primary mx-8">✦ THINK LESS ✦ CREATE MORE ✦ DATA DRIVEN ✦ MACHINE LEARNING ✦ INNOVATION ✦ PYTHON ✦ SQL ✦ COMPUTER VISION ✦</span>
         </div>
       </div>
 

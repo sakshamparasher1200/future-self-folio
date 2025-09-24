@@ -28,103 +28,71 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group relative overflow-hidden bg-gradient-card border-border cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`card-hover bg-gradient-card border-border overflow-hidden group ${
+                project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+              }`}
             >
-              {/* Interactive Card Content */}
-              <div className="relative">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-secondary/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                </div>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                {/* Floating Action Buttons */}
-                <div className="absolute top-4 right-4 flex gap-2 transform translate-x-20 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-                  <Button 
-                    variant="secondary" 
-                    size="icon" 
-                    className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 border border-white/30 hover:bg-white/30 hover:scale-110 transition-all duration-200"
-                    asChild
-                  >
-                    <a href={project.githubUrl} aria-label="View on GitHub">
-                      <Github size={16} className="text-white" />
-                    </a>
-                  </Button>
-                  <Button 
-                    variant="secondary" 
-                    size="icon" 
-                    className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 border border-white/30 hover:bg-white/30 hover:scale-110 transition-all duration-200"
-                    asChild
-                  >
-                    <a href={project.liveUrl} aria-label="View live demo">
-                      <ExternalLink size={16} className="text-white" />
-                    </a>
-                  </Button>
-                </div>
-
                 {project.featured && (
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-gradient-to-r from-primary to-secondary text-white border-0 animate-pulse">
-                      ✨ Featured
-                    </Badge>
-                  </div>
+                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                    Featured
+                  </Badge>
                 )}
               </div>
               
-              <CardContent className="p-6 space-y-4">
-                <div className="space-y-3">
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  {project.title}
+                  <div className="flex gap-2">
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href={project.githubUrl} aria-label="View on GitHub">
+                        <Github size={18} />
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href={project.liveUrl} aria-label="View live demo">
+                        <ExternalLink size={18} />
+                      </a>
+                    </Button>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {project.description}
+                </p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge 
-                      key={tech} 
-                      variant="outline" 
-                      className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 animate-float"
-                      style={{ animationDelay: `${techIndex * 0.1}s` }}
-                    >
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="outline" className="border-primary/30 text-primary">
                       {tech}
                     </Badge>
                   ))}
                 </div>
                 
-                {/* Interactive Bottom Section */}
-                <div className="flex gap-3 pt-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-primary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:scale-105" 
-                    asChild
-                  >
-                    <a href={project.githubUrl} className="flex items-center gap-2">
-                      <Github size={16} />
-                      <span>View Code</span>
-                      <ExternalLink size={12} className="opacity-60" />
+                <div className="flex gap-3 pt-2">
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
+                    <a href={project.githubUrl}>
+                      <Github size={16} className="mr-2" />
+                      Code
                     </a>
                   </Button>
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 transition-all duration-200 hover:scale-105 glow" 
-                    asChild
-                  >
-                    <a href={project.liveUrl} className="flex items-center gap-2">
-                      <Play size={16} />
-                      <span>Live Demo</span>
+                  <Button size="sm" className="flex-1" asChild>
+                    <a href={project.liveUrl}>
+                      <Play size={16} className="mr-2" />
+                      Demo
                     </a>
                   </Button>
                 </div>
@@ -134,17 +102,9 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground group transition-all duration-300 hover:scale-105"
-            asChild
-          >
-            <a href="https://github.com/sakshamparasher1200" className="flex items-center gap-3">
-              <Github size={20} />
-              <span>View All Projects on GitHub</span>
-              <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" />
-            </a>
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Github size={20} className="mr-2" />
+            View All Projects on GitHub
           </Button>
         </div>
       </div>
